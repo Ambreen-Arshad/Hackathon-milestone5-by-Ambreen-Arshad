@@ -1,0 +1,152 @@
+/* Global Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #eaf4f4;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Main Container: Flex Layout for Form and Preview */
+.container {
+    display: flex;
+    flex-direction: column; /* Stack the form and preview vertically */
+    justify-content: center;
+    align-items: center;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    width: 90%; /* Keeps the container from being too wide */
+    max-width: 100px;
+    padding: 20px;
+    gap: 20px;
+}
+
+/* Form Section */
+#resume-form {
+    background-color: #f0f9ff;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 200%;
+    max-width: 800px;
+}
+
+fieldset {
+    border: 2px solid #007bff;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 20px;
+    background: #eaf4f4;
+}
+
+legend {
+    font-weight: bold;
+    color: #007bff;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    color: #555;
+}
+
+input, textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 2px solid #007bff;
+    outline: none;
+}
+
+input:focus, textarea:focus {
+    border-color: #0056b3;
+}
+
+/* Button Styling */
+button {
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    width: 80%;
+    margin-top: 10px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Resume Output Section */
+#resumeOutput {
+    padding: 20px;
+    border: 2px solid #007bff;
+    background-color: #e0f7fa;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 200%;
+    max-width: 800px;
+    margin: 16px 0;
+}
+
+#resumeOutput h2 {
+    color: #004085;
+    text-align: center;
+}
+
+#resumeOutput img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 20px auto;
+    border: 2px solid #007bff;
+}
+
+/* Actions Section */
+#actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    max-width: 800px;
+}
+
+#actions button {
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+    flex: 1;
+    margin: 5px;
+}
+
+#actions button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    #resume-form, #resumeOutput {
+        width: 100%;
+    }
+}

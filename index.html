@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Builder</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+    <form id="resume-form">
+        <h1>Milestone 05: Unique Path and Shareable Link By Ambreen Arshad</h1>
+        <p>Unique URL Generation (50 Points)</p>
+        <p>Does the system generate a unique path for each user's resume based on their username</p>
+
+        <!-- Personal Info -->
+        <fieldset>
+            <legend>Personal Information</legend>
+
+            <label for="username">Resume URL: </label>
+            <input type="text" id="username" name="username" placeholder="URL" required /> <br />
+
+            <label for="name">Name: </label>
+            <input type="text" id="name" placeholder="Full Name" required /><br />
+
+            <label for="email">Email: </label>
+            <input type="text" id="email" placeholder="Email" required />
+
+            <label for="phone">Phone: </label>
+            <input type="text" id="phone" placeholder="Phone Number" required /><br />
+
+            <label for="image">Profile Picture: </label>
+            <input type="file" id="image" accept="image/*" /><br /> <!-- File input for image -->
+        </fieldset>
+
+        <!-- Work Experience -->
+        <fieldset>
+            <legend>Work Experience</legend>
+            <label for="company">Company: </label>
+            <input type="text" id="company" placeholder="Company Name" /><br />
+
+            <label for="position">Position: </label>
+            <input type="text" id="position" placeholder="Position" />
+
+            <label for="duration">Duration: </label>
+            <input type="text" id="duration" placeholder="Duration" />
+        </fieldset>
+
+        <!-- Education -->
+        <fieldset>
+            <legend>Education</legend>
+            <label for="school">School: </label>
+            <input type="text" id="school" placeholder="School Name" /><br />
+
+            <label for="degree">Degree: </label>
+            <input type="text" id="degree" placeholder="Degree" />
+
+            <label for="graduation">Graduation: </label>
+            <input type="text" id="year" placeholder="Graduation Year" />
+        </fieldset>
+
+        <!-- Skills -->
+        <fieldset>
+            <legend>Skills</legend>
+            <label for="skills">Skills: </label>
+            <input type="text" id="skills" placeholder="Skills (comma separated)" />
+        </fieldset>
+
+        <button type="button" id="generate">Generate Resume</button>
+    </form>
+
+    <!-- Preview and Action Buttons -->
+    <div id="resumeOutput">
+        <!-- Resume preview will be generated here -->
+    </div>
+
+    <div id="actions">
+        <button type="button" id="download">Download as PDF</button>
+        <button type="button" id="copyLink">Copy Shareable Link</button>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script> <!-- jsPDF library -->
+</body>
+</html>
